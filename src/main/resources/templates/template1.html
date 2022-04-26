@@ -12,7 +12,7 @@
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link active" th:href="@{index}">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -24,11 +24,21 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Patients</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Link</a></li>
-                        <li><a class="dropdown-item" href="#">Another link</a></li>
-                        <li><a class="dropdown-item" href="#">A third link</a></li>
+                        <li><a class="dropdown-item" th:href="@{/formPatients}">Nouveaux</a></li>
+                        <li><a class="dropdown-item" th:href="@{/index}">Chercher</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a><img src="user.png"></a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">[Utilisateurs]</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" th:href="@{/formPatients}">Deconnexion</a></li>
+                        <li><a class="dropdown-item" href="#">Connexion</a></li>
+                        <li><a class="dropdown-item" href="#">Gerer compte</a></li>
                     </ul>
                 </li>
             </ul>
